@@ -1,1 +1,7 @@
-<p>menu works!</p>
+<nav>
+    <ul>
+        <li *ngFor="let bridge of bridges" title="{{bridge.name | titlecase}}" (click)="onBridgeSelected(bridge)">
+            {{bridge.name | titlecase}}
+        </li>
+    </ul>
+</nav>

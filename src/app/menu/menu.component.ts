@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Bridge } from '../bridge'
+import { Bridges } from '../bridges'
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  bridges: Array<Bridge> = Bridges;
+  @Output() bridgeSelected: EventEmitter<Bridge> = new EventEmitter();
   constructor() { }
+
+  onBridgeSelected(bridge: Bridge) : void {
+    console.log("inside onBridgeSelected", bridge);
+    this.bridgeSelected.emit(bridge);
+  }
 
   ngOnInit(): void {
   }
