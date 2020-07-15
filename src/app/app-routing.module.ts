@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { BridgeInfoComponent } from './bridge-info/bridge-info.component'
 
 const routes: Routes = [
-  { path: 'bridges/:id', component: BridgeInfoComponent},
-  { path: 'bridges', component: BridgeInfoComponent }, 
-  { path: '', redirectTo: 'bridges', pathMatch: 'full' }
+  { path: 'bridges/:id', component: BridgeInfoComponent },
+  { path: 'bridges', component: BridgeInfoComponent },
+  { path: '', redirectTo: 'bridges', pathMatch: 'full'}
 
 ];
 
