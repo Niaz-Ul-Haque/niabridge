@@ -1,7 +1,14 @@
 <nav>
     <ul>
-        <li *ngFor="let bridge of bridges" title="{{bridge.name | titlecase}}" (click)="onBridgeSelected(bridge)">
-            {{bridge.name | titlecase}}
+        <li 
+            *ngFor="let bridge of bridges"
+            routerLinkActive="selected"
+        >
+            <a 
+                [routerLink]="['/bridges', bridge.id]" 
+            >
+                {{bridge.name | titlecase}}
+            </a>
         </li>
     </ul>
 </nav>
