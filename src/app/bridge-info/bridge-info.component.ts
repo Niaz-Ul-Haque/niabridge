@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Bridge } from '../bridge';
 
 @Component({
   selector: 'app-bridge-info',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bridge-info.component.css']
 })
 export class BridgeInfoComponent implements OnInit {
+
+
+  @Input() bridge: Bridge;
 
   constructor() { }
 

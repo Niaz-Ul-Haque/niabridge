@@ -1,1 +1,7 @@
-<p>bridge-info-panel works!</p>
+<h2>{{ bridge.name | titlecase }}</h2>
+
+<div class="bridge-stats">
+    <div>Year: {{ bridge.year }}  ({{ age() }} years old)</div>
+    <div>Width: {{ width() }}</div>
+    <div>Length: {{ length() }}</div>
+</div>
